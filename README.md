@@ -1,18 +1,18 @@
-# block-ansible
-Minimal block environment build by ansible
+# blocks-ansible
+Minimal blocks environment build by ansible
 
 ## How to use
 
 Clone this repository into your project directory.
 
 ```bash
-git clone https://github.com/ganow/block-ansible.git /path/to/block-ansible
+git clone https://github.com/ganow/block-ansible.git /path/to/blocks-ansible
 ```
 
 Start VM and access to it.
 
 ```bash
-cd /path/to/block-ansible
+cd /path/to/blocks-ansible
 vagrant up
 vagrant ssh -- -L 8888:localhost:8888
 ```
@@ -30,13 +30,6 @@ Build Caffe environments with ansible
 ```bash
 cd /vagrant
 ansible-playbook playbook.yml -i localhost
-```
-
-Boot up IPython Notebook.
-
-```bash
-cd ~/caffe
-ipython notebook --no-browser
 ```
 
 # Requirements
