@@ -71,16 +71,16 @@
       - jsonschema
 
   - name: Setting data path for fuel
-    shell: echo "data_path: /vagrant_data" >> ~/.fuelrc
+    shell: "echo 'data_path: /vagrant_data' >> ~/.fuelrc"
 
   - name: Download MNIST
     sudo: yes
     shell: fuel-download mnist
     args:
-      creates: "{{ data_dir }}"/t10k-labels-idx1-ubyte.gz
+      creates: "{{ data_dir }}/t10k-labels-idx1-ubyte.gz"
 
   - name: Translate MNIST
     sudo: yes
     shell: fuel-convert mnist
     args:
-      creates: "{{ data_dir }}"/mnist.hdf5
+      creates: "{{ data_dir }}/mnist.hdf5"
